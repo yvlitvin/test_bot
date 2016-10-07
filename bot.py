@@ -9,8 +9,6 @@ from telebot import types
 
 
 bot = telebot.TeleBot(config.token)
-
-bot = telebot.TeleBot(config.token)
 @bot.message_handler(commands=['help','start'])
 def send_welcome(message):
     bot.reply_to(message, "Hello, you can use following commands \n /start \n /help \n /links")
@@ -37,4 +35,8 @@ def geophone(message):
     keyboard.add(button_phone, button_geo)
     bot.send_message(message.chat.id, "---", reply_markup=keyboard)
 
+
+
+bot.send_location
+    
 bot.polling()
